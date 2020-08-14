@@ -13,6 +13,14 @@
 #include <array>
 #include <cmath>
 
+#define SEETA_MODEL_ENCRYPT
+#ifdef SEETA_MODEL_ENCRYPT
+#include "SeetaLANLock.h"
+#include "hidden/SeetaLockFunction.h"
+#include "hidden/SeetaLockVerifyLAN.h"
+#include "orz/io/stream/filestream.h"
+#endif
+
 #include "model_helper.h"
 namespace seeta {
     namespace v6 {
