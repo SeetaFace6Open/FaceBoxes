@@ -29,5 +29,5 @@ cmake "$HOME/.." \
 
 make -j16
 
-make install
+#make install
 
