@@ -32,6 +32,11 @@ namespace seeta {
             SEETA_API explicit FaceDetector(const self *other);
 
             SEETA_API SeetaFaceInfoArray detect(const SeetaImageData &image) const;
+            
+            std::vector<SeetaFaceInfo> detect_v2(const SeetaImageData &image) const {
+                auto faces = this->detect(image);
+                return std::vector<SeetaFaceInfo>(faces.data, faces.data + faces.size);
+            }
 
             SEETA_API void set(Property property, double value);
 
